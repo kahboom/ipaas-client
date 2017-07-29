@@ -74,6 +74,7 @@ export class BasicFilterComponent implements OnInit {
 
   // Manage Individual Fields
   add() {
+    console.log('this.rulesArrayModel: ' + JSON.stringify(this.rulesArrayModel));
     this.formService.addFormArrayGroup(this.rulesArrayControl, this.rulesArrayModel);
   }
 

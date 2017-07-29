@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import * as _ from 'lodash';
+import * as $ from 'jquery';
 
 import { RestangularModule } from 'ngx-restangular';
 import { OAuthService, OAuthModule } from 'angular-oauth2-oidc-hybrid';

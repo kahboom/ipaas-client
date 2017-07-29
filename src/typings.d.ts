@@ -28,3 +28,6 @@ declare class EventSource {
 interface JQuery {
   matchHeight(options?: any): any;
 }
+interface JQuery<HTMLElement> {
+  setupVerticalNavigation: void;
+}

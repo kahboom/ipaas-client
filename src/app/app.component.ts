@@ -32,7 +32,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   // White BG
   logoWhiteBg = 'assets/images/syndesis-logo-svg-white.svg';
-  iconWhiteBg = 'assets/images/glasses_logo.svg';
 
   // Dark BG
   logoDarkBg = 'assets/images/syndesis-logo-svg-white.svg';
@@ -40,7 +39,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   loggedIn = false;
   title = 'Syndesis';
-  url = 'https://www.twitter.com/jboss';
+  url = 'https://www.twitter.com/syndesisio';
   user: Observable<User>;
 
   notifications: Notification[];
