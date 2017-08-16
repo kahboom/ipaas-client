@@ -4,7 +4,7 @@ import 'codemirror/mode/go/go';
 import { CurrentFlow, FlowEvent } from '../../current-flow.service';
 import { IntegrationSupportService } from '../../../../store/integration-support.service';
 
-//import { log, getCategory } from '../../../../logging';
+import { log, getCategory } from '../../../../logging';
 import { AdvancedFilter } from './filter.interface';
 
 @Component({
@@ -43,8 +43,8 @@ export class AdvancedFilterComponent implements OnInit {
   ngOnInit() {
     const prevStep = this.currentFlow.getPreviousConnection(this.position);
 
-    this.integrationSupport.getFilterOptions(prevStep.connection.id, prevStep.action.id).toPromise().then((resp: any) => {
-      //log.info('Filter option response: ' + JSON.stringify(resp));
+    this.integrationSupport.getFilterOptions(this.currentFlow.getIntegrationClone()).toPromise().then((resp: any) => {
+      log.infoc(() => 'Filter option response: ' + JSON.stringify(resp));
     });
 
     //this.formGroup = this.formService.createFormGroup(this.advancedFilterModel);
